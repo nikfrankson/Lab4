@@ -22,7 +22,8 @@
                     <th>
                         <div class="btn-group pull-right">
                             <button type="button" class="btn btn-success" (click)="saveStudent()">Save</button>
-                            <button type="button" class="btn btn-info" [disable]="disableAddButton" (click)="addStudent()">Add</button>
+                            <button type="button" class="btn btn-info" [disabled]="disableAddButton"
+                                (click)="addStudent()">Add</button>
                         </div>
                     </th>
                 </tr>
@@ -39,8 +40,9 @@
                         <input [(ngModel)]="student.id" type="text" class="form-control" placeholder="ID">
                     </th>
                     <td *ngIf="student.editMode">
-                        <input [(ngModel)]="student.firstName" type="text" class="form-control" placeholder="First Name">
-                            
+                        <input [(ngModel)]="student.firstName" type="text" class="form-control"
+                            placeholder="First Name">
+
                     </td>
                     <td *ngIf="student.editMode">
                         <input [(ngModel)]="student.lastName" type="text" class="form-control" placeholder="Last Name">

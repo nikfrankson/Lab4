@@ -44,6 +44,14 @@ export class MainContentComponent implements OnInit {
         lastName: 'Schwarzenegger',
         course: 'Weight Lifting',
         editMode: false
+      },
+      {
+        id: 1,
+        firstName: 'Nik',
+        lastName: 'Frankson',
+        course: 'Programming',
+        editMode: false
+
       }
 
     ];
@@ -69,12 +77,12 @@ export class MainContentComponent implements OnInit {
     this.studentArray[0].editMode = false;
     this.disableAddButton = false;
 
-    this.sort();
+
   }
 
   sort(direction: string) {
     this.studentArray.sort((a: IStudent, b: IStudent) => {
-     return a.id < b.id ? -1 : 1;
+      return a.id < b.id ? -1 : 1;
     });
   }
 
